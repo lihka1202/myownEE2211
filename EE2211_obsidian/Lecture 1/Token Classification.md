@@ -1,0 +1,6 @@
+- Step 1: **Feature Abstraction**
+	- Extract the attributes of the samples
+- Step 2: **Sample Classification**
+	- You can classify different attributes based off how **similar they are**.
+	- You can **find the nearest neighbour**, slightly more intensive computationally, and keep assigning labels. This is called **Nearest Neighbour Classifier**. Kinda related to the **K-Nearest Neighbours** Problem.
+	- 

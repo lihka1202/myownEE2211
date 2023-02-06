@@ -1,0 +1,5 @@
+- Data Integrity is the maintenance and the assurance of data accuracy and consistency
+	- Critical aspect, esp for AI models. If the models have inherent biases this could be an egregious breach of integrity. This has happened in the case of Chat GPT where chat GPT started being pro Biden but anti Trump
+- But the basic example is that in a single dataset, the columns should not be accepting alphabetic data
+- A binary entry should only allow binary inputs
+- 
