@@ -1,0 +1,301 @@
+{
+  "main": {
+    "id": "bca08ad556a0d51c",
+    "type": "split",
+    "children": [
+      {
+        "id": "f6dce942e46cbf6c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d8de5a8546e2196e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lecture 3/Intro to Linear Algebra.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "aa54d607fa5265b1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lecture 3/Causality.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c6bbd60d073010fe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lecture 4/Linear Independance.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a498f49e73a6d59a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lecture 4/Rank.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e3461d40201e7d01",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lecture 4/Rank.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "95a2a7e216088d41",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tutorial 1/Some notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3910b9dd92f0edf1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tutorial 1/Final Solutions and Thoughts.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7f96e2063013e36d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tutorial 2/Tutorial 2 key pointers.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b5e7f66cb5fd2881",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lecture 4/Rank.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "07b053f3a14d4087",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tutorial 4/Answers.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "463eb0687e717ced",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lecture 4/Rank.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 10
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "987aa33dd2a60a51",
+    "type": "split",
+    "children": [
+      {
+        "id": "0da7a6920b3bb7db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "50e8b490fadac822",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "00a9ed71d8a411a7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2d1b385f8dc4fda9",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "d68dc6998d163393",
+    "type": "split",
+    "children": [
+      {
+        "id": "dc68daca9bb7d582",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38832d5c90063632",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Lecture 4/Rank.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fdb4e03ff39681c0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Lecture 4/Rank.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fce382c8db79d7ff",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c016b0409787f15c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Lecture 4/Rank.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "463eb0687e717ced",
+  "lastOpenFiles": [
+    "Tutorial 5/Answers.md",
+    "Tutorial 4/Answers.md",
+    "Tutorial 5",
+    "Lecture 4/Rank.md",
+    "Tutorial 4",
+    "Lecture 4/Linear Independance.md",
+    "Tutorial 3/Tut 3.md",
+    "Lecture 2/Missing Data.md",
+    "Tutorial 2/Tutorial 2 key pointers.md",
+    "Tutorial 3",
+    "Tutorial 1/Final Solutions and Thoughts.md",
+    "Tutorial 2",
+    "Lecture 1/Unsupervised Learning.md",
+    "Lecture 1/Introduction.md",
+    "Lecture 1/Supervised Learning.md",
+    "Lecture 1/Reinforcement Learning.md",
+    "Tutorial 1/Some notes.md",
+    "Pasted image 20230228030303.png",
+    "Pasted image 20230228025353.png",
+    "Pasted image 20230228025215.png",
+    "Untitled.md",
+    "Lecture 3/Causality.md",
+    "Lecture 3/Intro to Linear Algebra.md",
+    "Lecture 2/Levels or scales of data/Ordinal Data..md",
+    "Lecture 2/Levels or scales of data/Interval Data.md",
+    "Lecture 2/Levels or scales of data/LEvels of data.md",
+    "Lecture 2/Levels or scales of data/Numerical or Categorical Data.md",
+    "Lecture 2/Data Wrangling/Data Wrangling - intro.md"
+  ]
+}

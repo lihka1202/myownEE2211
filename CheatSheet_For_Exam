@@ -1,0 +1,117 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Mar  3 03:41:26 2023
+
+@author: mnakhil
+"""
+
+import numpy as np
+from sklearn.preprocessing import PolynomialFeatures, OneHotEncoder
+
+raw_X = np.array([[3],[4],[5],[6],[7]])
+raw_y = np.array([[5],[4],[3],[2],[1]])
+raw_X_test = np.array([[8]])
+
+# PARAMETERS
+poly_degree = 1
+lamb = 0
+
+"""
+# X - DESIGN MATRIX 1: LINEAR
+# X = np.column_stack((np.ones(len(raw_X)), raw_X))
+# print(X)
+# X_test = np.column_stack((np.ones(len(raw_X_test)), raw_X_test))
+# print(X_test)
+
+I dont think we need this, can set the poly degree to be 1 and work it around
+Same of lamb, can set to be 0 when using primal and some value (0.0001) when
+using dual
+"""
+
+# X - DESIGN MATRIX 2: POLYNOMIAL
+poly = PolynomialFeatures(degree=poly_degree)
+#X = poly.fit_transform(raw_X.reshape((len(raw_X), 1))) # when x needs to be single column vector
+X = poly.fit_transform(raw_X) # for raw_x which is already 2d
+# print(X)
+#X_test = poly.fit_transform(raw_X_test.reshape((len(raw_X_test), 1)))
+X_test = poly.fit_transform(raw_X_test)
+
+# y - TARGET MATRIX 1: d dimensional
+# y = raw_y.reshape((len(raw_y), 1)) # when y needs to be in single column vector
+y = raw_y #when y is already in 2d
+
+# y - TARGET MATRIX 2: One hot encoding
+# encoder = OneHotEncoder(sparse=False)
+# y = encoder.fit_transform(raw_y.reshape((len(raw_y),1)))
+# print("Check encoder result:\n" + str(y))
+
+
+"""
+This basically checks the dimensions and auto calculates W, based on the type
+of system this is. Have  included the case for unique sqaure matrices
+"""
+if(X.shape[0]>X.shape[1]):
+    print("Overdetermined")
+    if(np.linalg.matrix_rank(X)==np.linalg.matrix_rank(np.hstack((X,y))) and np.linalg.matrix_rank(np.hstack((X,y)))==X.shape[1] ):
+        print("Unique")
+        w = np.linalg.inv(X.T @ X + lamb*np.eye(X.shape[1])) @ X.T @ y
+    elif(np.linalg.matrix_rank(X) < np.linalg.matrix_rank(np.hstack((X,y)))):
+        print("No solution")
+        print("\nApproximate Solution can be obtained by using least square solution")
+        w = np.linalg.inv(X.T @ X + lamb*np.eye(X.shape[1])) @ X.T @ y
+    elif(np.linalg.matrix_rank(X)==np.linalg.matrix_rank(np.hstack((X,y))) and np.linalg.matrix_rank(np.hstack((X,y))) < X.shape[1]):
+        print("Infinite Solutions")
+elif(X.shape[0]<X.shape[1]):
+    print("Underdetermined")
+    if(np.linalg.matrix_rank(X)==np.linalg.matrix_rank(np.hstack((X,y))) and np.linalg.matrix_rank(np.hstack((X,y)))==X.shape[1] ):
+        print("Unique")
+    elif(np.linalg.matrix_rank(X) < np.linalg.matrix_rank(np.hstack((X,y)))):
+        print("No solution exists as Left and right inverse is not possible")
+    elif(np.linalg.matrix_rank(X)==np.linalg.matrix_rank(np.hstack((X,y))) and np.linalg.matrix_rank(np.hstack((X,y))) < X.shape[1]):
+        print("Infinite Solutions")
+        print("\nApproximate Solution can be obtained by using least norm solution")
+        w = X.T @ np.linalg.inv(X @ X.T + lamb*np.eye(X.shape[0])) @ y
+        print(w);
+else:
+    if(np.linalg.matrix_rank(X)==np.linalg.matrix_rank(np.hstack((X,y))) and np.linalg.matrix_rank(np.hstack((X,y)))==X.shape[1] ):
+        print("Unique")
+        w = np.linalg.inv(X) @ y
+        print(w)
+    elif(np.linalg.matrix_rank(X) < np.linalg.matrix_rank(np.hstack((X,y)))):
+        print("No solution")
+    elif(np.linalg.matrix_rank(X)==np.linalg.matrix_rank(np.hstack((X,y))) and np.linalg.matrix_rank(np.hstack((X,y))) < X.shape[1]):
+        print("Infinite Solutions")
+        w = X.T @ np.linalg.inv(X @ X.T + lamb*np.eye(X.shape[0])) @ y
+        print(w)
+
+# w - WEIGHT MATRIX 1: Primal (m>d, overdetermined) NO Ridge regression
+# w = np.linalg.inv(X.T @ X) @ X.T @ y
+
+# w - WEIGHT MATRIX 2: Primal (m>d, overdetermined) WITH Ridge regression
+# w = np.linalg.inv(X.T @ X + lamb*np.eye(X.shape[1])) @ X.T @ y
+
+# w - WEIGHT MATRIX 3: Dual (d>m, underdetermined) NO Ridge regression
+# w = X.T @ np.linalg.inv(X @ X.T) @ y
+
+# w - WEIGHT MATRIX 4: Dual (d>m, underdetermined) WITH Ridge regression
+# w = X.T @ np.linalg.inv(X @ X.T + lamb*np.eye(X.shape[0])) @ y
+
+# error_term = ((prediction - y) ** 2).mean();
+
+print("Weight matrix:\n" + str(w))
+prediction = X_test @ w
+
+
+# result - Linear regression
+print("Linear regression prediction:\n" + str(prediction))
+
+
+# result - Binary classification
+# for i in range(len(prediction)):
+#     print("Binary prediction " + str(i) + ": " + str(np.sign(prediction[i])))
+
+
+# result - Multiple classification   
+# for i in range(len(prediction)):
+#       print("Class prediction: " + str(np.argmax(prediction[i]) + 1))
